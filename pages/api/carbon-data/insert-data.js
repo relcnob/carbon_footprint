@@ -11,9 +11,10 @@ export default async function handler(req, res) {
   if (req.method === "POST") {
     const { data, error } = await supabase
       .from("carbon-data")
-      .insert([{ slug: uuidv4(), instagram: 1.5, linkedin: 0.5, snapchat: 2 }])
+      .insert([{ slug: uuidv4(), instagram: Math.floor(Math.random() * 8), linkedin: Math.floor(Math.random() * 8), snapchat: Math.floor(Math.random() * 8) }])
       .select();
-    if (!error) res.status(200).redirect(`/result/${data[0].slug}`);
+    // if (!error) res.status(200).redirect(`/result/${data[0].slug}`);
+    if (!error) res.status(200).json(data);
     error && console.log(error);
   } else {
     res.status(400).send("<h1>The API should be accessed by POST only</h1><a href='/'> GO back to initial page </a>");
