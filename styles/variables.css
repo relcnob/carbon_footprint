@@ -1,0 +1,14 @@
+:root {
+  --main: #262a2d;
+  --secondary: #2b2f32;
+  --green: #70f98e;
+  --text: #e7e9eb;
+  --lightgray: #687a88;
+}
+
+.light {
+  --main: #f1f2f3;
+  --secondary: #e7e9eb;
+  --green: #008334;
+  --text: #687a88;
+}
