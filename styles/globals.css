@@ -19,8 +19,8 @@ a {
     color-scheme: dark;
   }
   body {
-    color: white;
-    background: black;
+    color: var(--text);
+    background: var(--secondary);
   }
 }
 .container {
