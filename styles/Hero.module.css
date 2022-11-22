@@ -5,4 +5,5 @@
   justify-content: space-around;
   height: (90vh);
   font-size: 3rem;
+  color: var(--green);
 }
