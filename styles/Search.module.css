@@ -1,5 +1,4 @@
 .searchLabel {
-  color: red;
   position: relative;
 }
 
@@ -19,8 +18,10 @@
 }
 
 .searchInput {
+  background-color: #262a2d;
+  color: #d9d9d9;
   padding: 0.4rem 0.4rem;
   width: 10rem;
-  border-color: white;
   border-radius: 4px;
+  border: #d9d9d9 solid 3px;
 }

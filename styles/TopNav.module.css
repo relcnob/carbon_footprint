@@ -3,6 +3,8 @@
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
+  background-color: #262a2d;
+  color: #d9d9d9;
 }
 
 .navigation > div {

@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import TopNav from "../components/TopNav";
 import "../styles/globals.css";
 function MyApp({ Component, pageProps }) {
@@ -5,6 +6,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <TopNav />
       <Component {...pageProps} />
+      <Footer />
     </>
   );
 }
