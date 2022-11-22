@@ -1,0 +1,7 @@
+.detailCardList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  max-width: 1400px;
+  margin: auto;
+  gap: 1rem;
+}
