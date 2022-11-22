@@ -4,10 +4,7 @@ import DetailResultCard from "./DetailResutCard";
 function DetailResult() {
   return (
     <section className={styles.detailCardList}>
-      <DetailResultCard />
-      <DetailResultCard />
-      <DetailResultCard />
-      <DetailResultCard />
+      <DetailResultCard SoMeName="Facebook" TotalCO2="123" />
     </section>
   );
 }
