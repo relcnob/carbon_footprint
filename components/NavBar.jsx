@@ -4,18 +4,21 @@ import styles from "../styles/NavBar.module.css";
 /* import ToggleDarkMode from "./ToggleDarkMode"; */
 function NavBar() {
   return (
-    <nav className={styles.navigation}>
-      {/* Logo */}
-      <h1>SoMe / Carbon</h1>
+    <header className={styles.header}>
+      <div className="container">
+        <nav className={styles.navigation}>
+          {/* Logo */}
+          <h1>SoMe / Carbon</h1>
+          <div className={styles.SearchToggle}>
+            {/* Search */}
+            <Search />
 
-      <div>
-        {/* Search */}
-        <Search />
-
-        {/* Toggle Dark Mode */}
-        {/*      <ToggleDarkMode /> */}
+            {/* Toggle Dark Mode */}
+            {/*      <ToggleDarkMode /> */}
+          </div>
+        </nav>
       </div>
-    </nav>
+    </header>
   );
 }
 
