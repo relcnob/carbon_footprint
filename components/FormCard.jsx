@@ -6,7 +6,7 @@ function FormCard() {
   const [TimeAmount, setTimeAmount] = useState(0);
 
   function timeHandler() {
-    setTimeAmount(parseInt(event.target.value));
+    setTimeAmount(parseFloat(event.target.value));
   }
   function decreaseTime() {
     if (TimeAmount > 0) {
@@ -24,7 +24,7 @@ function FormCard() {
   return (
     <section className="formCard">
       <Image src={facebook} alt="facebook" width="100" height="100"></Image>
-      <p>{TimeAmount}</p>
+      <p>{TimeAmount} h</p>
       <div>
         <span
           onClick={() => {
@@ -38,7 +38,6 @@ function FormCard() {
           max={12}
           step={0.5}
           value={TimeAmount}
-          className="custom-slider"
         ></input>
         <span
           onClick={() => {
