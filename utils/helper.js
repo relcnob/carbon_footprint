@@ -23,12 +23,17 @@ function getTotalEmission(data) {
       }
     });
     let total_emission_per_day = 0;
+    const carbs = {};
     // Populate total_emission_per_day
     keys.map((key) => {
       return (total_emission_per_day += Number(entry[key] * config[`${key.toUpperCase()}_CARB`]));
     });
 
-    return { ...entry, total_emission_per_day };
+    keys.forEach((el) => {
+      carbs[el + "_carbon"] = entry[el] * config[`${el.toUpperCase()}_CARB`];
+    });
+
+    return { ...entry, ...carbs, total_emission_per_day };
   });
   return newData;
 }
