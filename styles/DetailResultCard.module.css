@@ -1,0 +1,52 @@
+.ul {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.4rem;
+  padding: 0;
+}
+.li {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #2b2f32;
+  list-style: none;
+  padding: 0.5rem 1rem;
+}
+
+.line {
+  width: 2px;
+  height: 25px;
+  background-color: white;
+}
+
+.article {
+  background-color: #262a2d;
+  border-radius: 5px;
+  color: #f8f8f8;
+  padding: 0.7rem;
+}
+
+.article > header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+.icon {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: yellow;
+}
+
+.totalCO2 {
+  margin-right: 0;
+  margin-left: auto;
+  color: #fb4142;
+}
+
+.p {
+  margin-block: 0.4rem;
+}

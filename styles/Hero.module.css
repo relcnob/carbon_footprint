@@ -1,0 +1,9 @@
+.Hero {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+  font-size: 3rem;
+  color: var(--green);
+}
