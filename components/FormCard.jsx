@@ -21,9 +21,13 @@ function FormCard(props) {
       console.log(TimeAmount);
     }
   }
+  function capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
 
   return (
     <section className={styles.formCard}>
+      <p>{capitalize(props.name)}</p>
       <Image
         src={props.image}
         alt="facebook"

@@ -34,6 +34,15 @@
   cursor: pointer;
   grid-column: 1/-1;
   letter-spacing: 1px;
+  transition: 0.3s ease-in-out;
+}
+
+.carbonForm button:hover {
+  filter: brightness(1.2);
+}
+
+.carbonForm button:active {
+  filter: brightness(0.5);
 }
 
 @media screen and (min-width: 1130px) {
