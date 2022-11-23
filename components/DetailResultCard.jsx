@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "../styles/DetailResultCard.module.css";
+import Image from "next/image";
+import DetailResultCardItem from "./DetailResultCardItem";
 import facebook from "../public/facebook.svg";
 import car from "../public/car.svg";
 import airplane from "../public/airplane.svg";
 import beef from "../public/beef.svg";
 import banana from "../public/banana.svg";
 import water from "../public/water.svg";
-import Image from "next/image";
-/* import DetailResultCardItem from "./DetailResultCardItem"; */
 /* Math.round(2); */
 function DetailResultCard(props) {
   return (
@@ -21,46 +21,11 @@ function DetailResultCard(props) {
         </div>
       </header>
       <ul className={styles.ul}>
-        {/*  <DetailResultCardItem t ype={car} CarData="2" />
-        <DetailResultCardItem type={airplane} />
-        <DetailResultCardItem type={beef} />
-        <DetailResultCardItem type={water} />
-        <DetailResultCardItem type={banana} /> */}
-        <li className={styles.li}>
-          <Image src={car} alt="car icon" width="auto" height="20"></Image>
-
-          <div className={styles.line}></div>
-
-          <p className={styles.p}>Equal to {props.TotalCO2 * 5.21} km driven in a car</p>
-        </li>
-        <li className={styles.li}>
-          <Image src={airplane} alt="airplane icon" width="auto" height="20"></Image>
-
-          <div className={styles.line}></div>
-
-          <p className={styles.p}>Equal to {props.TotalCO2 * 3.92} km flight per passenger</p>
-        </li>
-        <li className={styles.li}>
-          <Image src={beef} alt="beef icon" width="auto" height="20"></Image>
-
-          <div className={styles.line}></div>
-
-          <p className={styles.p}>Equal to {props.TotalCO2 * 0.01} kg of beef</p>
-        </li>
-        <li className={styles.li}>
-          <Image src={water} alt="water icon" width="auto" height="20"></Image>
-
-          <div className={styles.line}></div>
-
-          <p className={styles.p}>Equal to {props.TotalCO2 * 0.01} l of water</p>
-        </li>
-        <li className={styles.li}>
-          <Image src={banana} alt="banana icon" width="auto" height="20"></Image>
-
-          <div className={styles.line}></div>
-
-          <p className={styles.p}>Equal to {props.TotalCO2 * 1.11} kg of bananas</p>
-        </li>
+        <DetailResultCardItem TotalCO2={props.TotalCO2} type={"car"} svg={car} conversion="5.21" unit="km" action="driven in a " />
+        <DetailResultCardItem TotalCO2={props.TotalCO2} type={"airplane"} svg={airplane} conversion="3.92" unit="km" action="per passenger on a" />
+        <DetailResultCardItem TotalCO2={props.TotalCO2} type={"beef"} svg={beef} conversion="0.01" unit="kg" action="of" />
+        <DetailResultCardItem TotalCO2={props.TotalCO2} type={"water"} svg={water} conversion="0.01" unit="ml" action="of" />
+        <DetailResultCardItem TotalCO2={props.TotalCO2} type={"bananas"} svg={banana} conversion="1.11" unit="kg" action="of" />
       </ul>
     </article>
   );
