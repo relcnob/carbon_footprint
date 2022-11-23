@@ -3,7 +3,7 @@ import facebook from "../public/facebook.svg";
 import Image from "next/image";
 import styles from "../modules/FormCard.module.css";
 
-function FormCard() {
+function FormCard(props) {
   const [TimeAmount, setTimeAmount] = useState(0);
 
   function timeHandler() {
@@ -21,11 +21,21 @@ function FormCard() {
       console.log(TimeAmount);
     }
   }
+  function capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
 
   return (
     <section className={styles.formCard}>
-      <Image src={facebook} alt="facebook" width="100" height="100"></Image>
-      <p>{TimeAmount} h</p>
+      <p>{capitalize(props.name)}</p>
+      <Image
+        src={props.image}
+        alt="facebook"
+        width="100"
+        height="100"
+        title={props.name}
+      ></Image>
+      <label htmlFor={props.name}>{TimeAmount} h</label>
       <div>
         <span
           onClick={() => {
@@ -39,7 +49,16 @@ function FormCard() {
             />
           </svg>
         </span>
-        <input type="range" onChange={timeHandler} min={0} max={12} step={0.5} value={TimeAmount}></input>
+        <input
+          type="range"
+          onChange={timeHandler}
+          min={0}
+          max={12}
+          step={0.5}
+          value={TimeAmount}
+          name={props.name}
+          id={props.name}
+        ></input>
         <span
           onClick={() => {
             increaseTime();
