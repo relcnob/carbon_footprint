@@ -34,10 +34,7 @@
   filter: brightness(1.5);
 }
 
-.formCard input {
-  width: 8rem;
-}
-.formCard p {
+.formCard label {
   color: var(--main);
   background-color: var(--green);
   min-width: 3.5rem;
@@ -46,10 +43,16 @@
   padding: 0.25rem;
   padding-bottom: 0.35rem;
   font-weight: 600;
+  display: block;
+  margin: 0.5rem 0;
 }
-
+.formCard img {
+  margin-bottom: 0.5rem;
+}
 /* input */
-
+.formCard input {
+  width: 8rem;
+}
 .formCard input[type="range"] {
   -webkit-appearance: none;
   appearance: none;

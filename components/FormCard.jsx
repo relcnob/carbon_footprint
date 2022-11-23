@@ -24,8 +24,14 @@ function FormCard(props) {
 
   return (
     <section className={styles.formCard}>
-      <Image src={facebook} alt="facebook" width="100" height="100"></Image>
-      <p>{TimeAmount} h</p>
+      <Image
+        src={props.image}
+        alt="facebook"
+        width="100"
+        height="100"
+        title={props.name}
+      ></Image>
+      <label htmlFor={props.name}>{TimeAmount} h</label>
       <div>
         <span
           onClick={() => {

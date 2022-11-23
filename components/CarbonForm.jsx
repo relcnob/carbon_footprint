@@ -1,36 +1,45 @@
 import FormCard from "./FormCard";
-
+import styles from "../modules/CarbonForm.module.css";
+import facebook from "../public/facebook.svg";
+import twitter from "../public/twitter.svg";
+import instagram from "../public/instagram.svg";
+import tiktok from "../public/tiktok.svg";
+import youtube from "../public/youtube.svg";
+import pinterest from "../public/pinterest.svg";
+import twitch from "../public/twitch.svg";
+import reddit from "../public/reddit.svg";
+import linkedin from "../public/linkedin.svg";
+import snapchat from "../public/snapchat.svg";
+import whatsapp from "../public/whatsapp.svg";
+import tinder from "../public/tinder.svg";
 function CarbonForm() {
   return (
     <>
       <form
-        style={{ maxWidth: "1440px", margin: "auto", padding: "1rem" }}
         action="/api/carbon-data/insert-data"
         method="POST"
-        className=""
+        className={styles.carbonForm}
       >
-        <section
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))",
-            gap: "1rem",
-          }}
-        >
-          <FormCard name="facebook"></FormCard>
-          <FormCard name="twitter"></FormCard>
-          <FormCard name="instagram"></FormCard>
-          <FormCard name="tiktok"></FormCard>
-          <FormCard name="youtube"></FormCard>
-          <FormCard name="pinterest"></FormCard>
-          <FormCard name="twitch"></FormCard>
-          <FormCard name="reddit"></FormCard>
-          <FormCard name="linkedin"></FormCard>
-          <FormCard name="snapchat"></FormCard>
-          <FormCard name="whatsapp"></FormCard>
-          <FormCard name="tinder"></FormCard>
+        <h1>
+          Choose social media platforms and adjust your time spent on them
+          daily.
+        </h1>
+        <section>
+          <FormCard name="facebook" image={facebook}></FormCard>
+          <FormCard name="twitter" image={twitter}></FormCard>
+          <FormCard name="instagram" image={instagram}></FormCard>
+          <FormCard name="tiktok" image={tiktok}></FormCard>
+          <FormCard name="youtube" image={youtube}></FormCard>
+          <FormCard name="pinterest" image={pinterest}></FormCard>
+          <FormCard name="twitch" image={twitch}></FormCard>
+          <FormCard name="reddit" image={reddit}></FormCard>
+          <FormCard name="linkedin" image={linkedin}></FormCard>
+          <FormCard name="snapchat" image={snapchat}></FormCard>
+          <FormCard name="whatsapp" image={whatsapp}></FormCard>
+          <FormCard name="tinder" image={tinder}></FormCard>
         </section>
-        <br></br>
-        <button> -- SUBMIT FORM -- </button>
+
+        <button>Check your footprint</button>
       </form>
     </>
   );
