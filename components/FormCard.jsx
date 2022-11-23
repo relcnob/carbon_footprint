@@ -3,7 +3,7 @@ import facebook from "../public/facebook.svg";
 import Image from "next/image";
 import styles from "../modules/FormCard.module.css";
 
-function FormCard() {
+function FormCard(props) {
   const [TimeAmount, setTimeAmount] = useState(0);
 
   function timeHandler() {
@@ -52,6 +52,8 @@ function FormCard() {
           max={12}
           step={0.5}
           value={TimeAmount}
+          name={props.name}
+          id={props.name}
         ></input>
         <span
           onClick={() => {
