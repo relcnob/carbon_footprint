@@ -2,7 +2,7 @@ function ReceiptEntry(props) {
   return (
     <tr>
       <td>
-        {props.hours} x {props.name}
+        {props.name} x {props.hours}
       </td>
       <td>{props.amount.toFixed(2)}</td>
     </tr>
