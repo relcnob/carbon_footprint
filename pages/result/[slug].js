@@ -1,19 +1,18 @@
 import DetailedResults from "../../components/DetailedResults";
 import { useState, useEffect } from "react";
+import ReceiptWrapper from "../../components/ReceiptWrapper";
 // fetch serverside props
 
-export default function Profile(props) {
-  console.log(props);
-
+export default function Results(props) {
   return (
     <>
       <section>
         <h1>Your Results</h1>
-        {/* <Receipt /> */}´
+        <ReceiptWrapper {...props} />
       </section>
       <section>
         <h2>Detailed Summary</h2>
-        <DetailedResults />
+        <DetailedResults {...props} />
       </section>
       <section>
         <h3>Other users of this website</h3>
