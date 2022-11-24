@@ -2,6 +2,7 @@ import React from "react";
 import Search from "./Search";
 import styles from "../styles/NavBar.module.css";
 import ModeToggle from "./ModeToggle";
+import Anchor from "../components/Anchor.js";
 /* import ToggleDarkMode from "./ToggleDarkMode"; */
 function NavBar(props) {
   return (
@@ -9,7 +10,7 @@ function NavBar(props) {
       <div className="container">
         <nav className={styles.navigation}>
           {/* Logo */}
-          <h1>SoMe / Carbon</h1>
+          <Anchor href="/">SoMe / Carbon</Anchor>
           <div className={styles.SearchToggle}>
             {/* Search */}
             <Search />
