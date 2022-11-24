@@ -51,7 +51,7 @@ function ReceiptWrapper(props) {
       <span>****************************</span>
       <div className={styles.barcode}></div>
       {/* UUID goes below */}
-      <p>935a4628-5b4b-4378-ac6a-88a4b6508664</p>
+      <p>{props.slug}</p>
     </section>
   );
 }
