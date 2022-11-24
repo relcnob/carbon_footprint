@@ -14,7 +14,7 @@ const config = {
   REDDIT_CARB: 0.18,
 };
 
-function getTotalEmission(data) {
+function getTotalEmission(data, option) {
   //Loop through data arr
   const newData = data.map((entry) => {
     // Reduce each object's carbon emission to grams in a mapped array of slug, total_emission and rest.
@@ -36,6 +36,9 @@ function getTotalEmission(data) {
 
     return { ...entry, ...carbs, total_emission_per_day };
   });
+  if (option === "clean") {
+    return newData[0].total_emission_per_day;
+  }
   return newData;
 }
 
@@ -58,4 +61,4 @@ function getOverall(data, slug) {
   return { ...current, rank, total_entries };
 }
 
-export { getOverall };
+export { getOverall, getTotalEmission };

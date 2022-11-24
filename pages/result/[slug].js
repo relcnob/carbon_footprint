@@ -1,12 +1,18 @@
 import DetailedResults from "../../components/DetailedResults";
 import ReceiptWrapper from "../../components/ReceiptWrapper";
 import styles from "../../styles/Result.module.css";
+import { createClient } from "@supabase/supabase-js";
+import { getOverall } from "../../utils/helper";
+import UserRank from "../../components/UserRank";
+// require("dotenv").config();
+// import dotenv from "dotenv";
 
 // fetch serverside props
 
 export default function Results(props) {
   return (
     <>
+      {/* Hello */}
       <section className={styles.section}>
         <h1 className={styles.h1}>Your Results</h1>
         <ReceiptWrapper {...props} />
@@ -24,15 +30,27 @@ export default function Results(props) {
 
       <section>
         <h3 className={styles.h3}>Other users of this website</h3>
+        <UserRank {...props} />
       </section>
     </>
   );
 }
 
 export async function getServerSideProps(context) {
-  require("dotenv").config();
+  const supabaseUrl = "https://xcckwxdaaemmncjylmpi.supabase.co";
+  const supabaseKey = process.env.SUPABASE_KEY;
+  const supabase = createClient(supabaseUrl, supabaseKey);
   const slug = context.params.slug;
-  const res = await fetch(`${process.env.URL_FETCH}/api/carbon-data/get-overall/${slug}`);
-  const data = await res.json();
-  return { props: data };
+  const { data, error } = await supabase
+    .from(process.env.TABLE_NAME)
+    .select("*");
+  if (!error) {
+    return {
+      props: {
+        ...getOverall(data, slug),
+      },
+    };
+  } else {
+    return { notFound: true };
+  }
 }
