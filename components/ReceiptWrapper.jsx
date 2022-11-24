@@ -17,19 +17,18 @@ function ReceiptWrapper(props) {
             <th>g of CO2</th>
           </tr>
           {/* ENTRIES GO HERE props: 'name" and "amount" see example below */}
-          <ReceiptEntry hours={props.tiktok} name="tiktok" amount={props.tiktok_carbon} />
-          <ReceiptEntry hours={props.facebook} name="facebook" amount={props.facebook_carbon} />
-          <ReceiptEntry hours={props.twitter} name="twitter" amount={props.twitter_carbon} />
-          <ReceiptEntry hours={props.instagram} name="instagram" amount={props.instagram_carbon} />
-          <ReceiptEntry hours={props.tiktok} name="tiktok" amount={props.tiktok_carbon} />
-          <ReceiptEntry hours={props.youtube} name="youtube" amount={props.youtube_carbon} />
-          <ReceiptEntry hours={props.pinterest} name="pinterest" amount={props.pinterest_carbon} />
-          <ReceiptEntry hours={props.twitch} name="twitch" amount={props.twitch_carbon} />
-          <ReceiptEntry hours={props.reddit} name="reddit" amount={props.reddit_carbon} />
-          <ReceiptEntry hours={props.linkedin} name="linkedin" amount={props.linkedin_carbon} />
-          <ReceiptEntry hours={props.snapchat} name="snapchat" amount={props.snapchat_carbon} />
-          <ReceiptEntry hours={props.whatsapp} name="whatsapp" amount={props.whatsapp_carbon} />
-          <ReceiptEntry hours={props.tinder} name="tinder" amount={props.tinder_carbon} />
+          {props.tiktok > 0 ? <ReceiptEntry hours={props.tiktok} name="tiktok" amount={props.tiktok_carbon} /> : null}
+          {props.facebook > 0 ? <ReceiptEntry hours={props.facebook} name="facebook" amount={props.facebook_carbon} /> : null}
+          {props.instagram > 0 ? <ReceiptEntry hours={props.instagram} name="instagram" amount={props.instagram_carbon} /> : null}
+          {props.twitter > 0 ? <ReceiptEntry hours={props.twitter} name="twitter" amount={props.twitter_carbon} /> : null}
+          {props.linkedin > 0 ? <ReceiptEntry hours={props.linkedin} name="linkedin" amount={props.linkedin_carbon} /> : null}
+          {props.reddit > 0 ? <ReceiptEntry hours={props.reddit} name="reddit" amount={props.reddit_carbon} /> : null}
+          {props.tinder > 0 ? <ReceiptEntry hours={props.tinder} name="tinder" amount={props.tinder_carbon} /> : null}
+          {props.whatsapp > 0 ? <ReceiptEntry hours={props.whatsapp} name="whatsapp" amount={props.whatsapp_carbon} /> : null}
+          {props.snapchat > 0 ? <ReceiptEntry hours={props.snapchat} name="snapchat" amount={props.snapchat_carbon} /> : null}
+          {props.twitch > 0 ? <ReceiptEntry hours={props.twitch} name="twitch" amount={props.twitch_carbon} /> : null}
+          {props.pinterest > 0 ? <ReceiptEntry hours={props.pinterest} name="pinterest" amount={props.pinterest_carbon} /> : null}
+          {props.youtube > 0 ? <ReceiptEntry hours={props.youtube} name="youtube" amount={props.youtube_carbon} /> : null}
         </tbody>
       </table>
       <span>****************************</span>
