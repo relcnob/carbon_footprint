@@ -84,7 +84,7 @@ function DetailResultCard(props) {
 
           <div className={styles.line}></div>
 
-          <p className={styles.p}>Equal to {(props.TotalCO2 * 0.01).toFixed(2)} kg of beef</p>
+          <p className={styles.p}>Equal to {(props.TotalCO2 * 10.05).toFixed(2)} kg of beef</p>
         </li>
         <li className={styles.li}>
           <Image src={water} alt="water icon" width="auto" height="20"></Image>
