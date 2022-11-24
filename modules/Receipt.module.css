@@ -1,0 +1,90 @@
+.receiptWrapper {
+  background-color: #c2b7b7;
+  max-width: 400px;
+  width: fit-content;
+  color: #1f1d1d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  position: relative;
+}
+
+.receiptWrapper h2 {
+  margin: 0;
+  text-align: center;
+  margin-bottom: 0.25rem;
+  font-size: 1.2rem;
+  max-width: 24ch;
+}
+
+.receiptWrapper span {
+  letter-spacing: 3px;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: auto;
+}
+
+.receiptWrapper table {
+  width: 100%;
+  padding: 0 0.25rem;
+}
+
+.receiptWrapper table tr:first-of-type {
+  margin-bottom: 0.25rem;
+}
+
+.receiptWrapper > section {
+  width: 100%;
+}
+
+.receiptWrapper table tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.summary td {
+  font-weight: 700;
+}
+
+.receiptWrapper p {
+  color: rgb(71, 68, 68);
+}
+.receiptWrapper * {
+  z-index: 15;
+}
+
+.receiptOverlay {
+  position: absolute;
+  pointer-events: none;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.receiptWrapper:after {
+  position: absolute;
+  width: 100%;
+  height: 1rem;
+  background-image: url(../public/receipt-finish.svg);
+  background-size: contain;
+  background-repeat: repeat-x;
+  content: " ";
+  display: block;
+  bottom: -0.5rem;
+  left: 0;
+}
+
+.barcode {
+  width: 100%;
+  height: 3rem;
+  background-image: url("../public/barcode.svg");
+}
