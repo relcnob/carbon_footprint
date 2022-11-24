@@ -1,6 +1,7 @@
 import DetailedResults from "../../components/DetailedResults";
 import ReceiptWrapper from "../../components/ReceiptWrapper";
 import styles from "../../styles/Result.module.css";
+require("dotenv").config();
 // fetch serverside props
 
 export default function Results(props) {
@@ -29,7 +30,7 @@ export default function Results(props) {
 }
 export async function getServerSideProps(context) {
   const slug = context.params.slug;
-  const res = await fetch(`http://localhost:3000/api/carbon-data/get-overall/${slug}`);
+  const res = await fetch(`${process.env.URL}/api/carbon-data/get-overall/${slug}`);
   const data = await res.json();
   return { props: data };
 }
