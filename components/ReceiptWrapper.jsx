@@ -18,6 +18,18 @@ function ReceiptWrapper(props) {
           </tr>
           {/* ENTRIES GO HERE props: 'name" and "amount" see example below */}
           <ReceiptEntry hours={props.tiktok} name="tiktok" amount={props.tiktok_carbon} />
+          <ReceiptEntry hours={props.facebook} name="facebook" amount={props.facebook_carbon} />
+          <ReceiptEntry hours={props.twitter} name="twitter" amount={props.twitter_carbon} />
+          <ReceiptEntry hours={props.instagram} name="instagram" amount={props.instagram_carbon} />
+          <ReceiptEntry hours={props.tiktok} name="tiktok" amount={props.tiktok_carbon} />
+          <ReceiptEntry hours={props.youtube} name="youtube" amount={props.youtube_carbon} />
+          <ReceiptEntry hours={props.pinterest} name="pinterest" amount={props.pinterest_carbon} />
+          <ReceiptEntry hours={props.twitch} name="twitch" amount={props.twitch_carbon} />
+          <ReceiptEntry hours={props.reddit} name="reddit" amount={props.reddit_carbon} />
+          <ReceiptEntry hours={props.linkedin} name="linkedin" amount={props.linkedin_carbon} />
+          <ReceiptEntry hours={props.snapchat} name="snapchat" amount={props.snapchat_carbon} />
+          <ReceiptEntry hours={props.whatsapp} name="whatsapp" amount={props.whatsapp_carbon} />
+          <ReceiptEntry hours={props.tinder} name="tinder" amount={props.tinder_carbon} />
         </tbody>
       </table>
       <span>****************************</span>
@@ -26,7 +38,7 @@ function ReceiptWrapper(props) {
           <tr>
             <td>Total</td>
             {/* total should be calculated below */}
-            <td>sum 12</td>
+            <td>{props.total_emissions_per_day}</td>
           </tr>
           <tr>
             <td>Unit</td>
