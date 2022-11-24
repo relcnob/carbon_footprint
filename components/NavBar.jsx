@@ -1,8 +1,9 @@
 import React from "react";
 import Search from "./Search";
 import styles from "../styles/NavBar.module.css";
+import ModeToggle from "./ModeToggle";
 /* import ToggleDarkMode from "./ToggleDarkMode"; */
-function NavBar() {
+function NavBar(props) {
   return (
     <header className={styles.header}>
       <div className="container">
@@ -12,7 +13,7 @@ function NavBar() {
           <div className={styles.SearchToggle}>
             {/* Search */}
             <Search />
-
+            <ModeToggle toggle={props.lightmode}></ModeToggle>
             {/* Toggle Dark Mode */}
             {/*      <ToggleDarkMode /> */}
           </div>

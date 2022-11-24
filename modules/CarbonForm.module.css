@@ -6,15 +6,30 @@
   flex-direction: column;
 }
 
-.carbonForm > h1 {
+.carbonForm h1 {
   max-width: 36ch;
   text-align: center;
   margin: auto;
-  margin-bottom: 5rem;
   color: var(--green);
   font-weight: 500;
 }
 
+.carbonForm h1 + svg {
+  transform: rotate(90deg) scale(1.4);
+  cursor: pointer;
+}
+
+.carbonForm h1 + svg > path {
+  fill: var(--green);
+}
+
+.carbonForm > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5rem;
+  gap: 1.5rem;
+}
 .carbonForm > section {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));

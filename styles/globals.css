@@ -16,15 +16,11 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: var(--text);
-    background: var(--secondary);
-  }
+#content_wrapper {
+  color: var var(--text);
+  background: var(--secondary);
 }
+
 .container {
   --max-width: 1440px;
   --container-padding: 1.5rem;

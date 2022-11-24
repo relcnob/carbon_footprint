@@ -3,8 +3,8 @@ import style from "../styles/Footer.module.css";
 function Footer() {
   return (
     <footer className={style.footer}>
-      <p>techno toots @ 2022</p>
-      <p>project created for forte advice</p>
+      <p>Techno Toots @ 2022</p>
+      <p>project created for Forte Advice</p>
     </footer>
   );
 }
