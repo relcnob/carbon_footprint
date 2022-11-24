@@ -6,7 +6,6 @@ function Hero() {
     <div className="container">
       <div className={styles.Hero}>
         <h1>Calculate your social media carbon emissions</h1>
-        <DownArrow />
       </div>
     </div>
   );
