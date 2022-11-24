@@ -9,12 +9,19 @@ export default function Results(props) {
       <section className={styles.section}>
         <h1 className={styles.h1}>Your Results</h1>
         <ReceiptWrapper {...props} />
+        <div className={styles.buttons}>
+          <button className={styles.button}>Share to Facebook</button>
+          <button className={styles.button}>Share to Instagram</button>
+          <button className={styles.button}>Share to Twitter</button>
+        </div>
       </section>
-      <section className={styles.section}>
+
+      <section>
         <h2 className={styles.h2}>Detailed Summary</h2>
         <DetailedResults {...props} />
       </section>
-      <section className={styles.section}>
+
+      <section>
         <h3 className={styles.h3}>Other users of this website</h3>
       </section>
     </>
