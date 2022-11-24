@@ -1,7 +1,7 @@
 import styles from "../modules/Receipt.module.css";
 import ReceiptEntry from "./ReceiptEntry";
 
-function ReceiptWrapper() {
+function ReceiptWrapper(props) {
   return (
     <section className={styles.receiptWrapper}>
       <div className={styles.receiptOverlay}></div>
@@ -17,7 +17,7 @@ function ReceiptWrapper() {
             <th>g of CO2</th>
           </tr>
           {/* ENTRIES GO HERE props: 'name" and "amount" see example below */}
-          <ReceiptEntry name="facebook" amount="123.45" />
+          <ReceiptEntry hours={props.tiktok} name="tiktok" amount={props.tiktok_carbon} />
         </tbody>
       </table>
       <span>****************************</span>
