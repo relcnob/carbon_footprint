@@ -37,7 +37,7 @@ function ReceiptWrapper(props) {
           <tr>
             <td>Total</td>
             {/* total should be calculated below */}
-            <td>{props.total_emissions_per_day}</td>
+            <td>{props.total_emission_per_day}</td>
           </tr>
           <tr>
             <td>Unit</td>
