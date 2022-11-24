@@ -10,16 +10,18 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.1.0",
+    "chart.js": "^4.0.1",
     "dotenv": "^16.0.3",
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.4",
     "next": "13.0.4",
     "react": "18.2.0",
+    "react-chartjs-2": "^5.0.1",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "sass": "^1.56.1",
     "react-dom": "18.2.0",
+    "sass": "^1.56.1",
     "uuid": "^9.0.0"
   }
 }
