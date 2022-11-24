@@ -14,6 +14,6 @@ export default async function handler(req, res) {
   if (!error) res.status(200).json(getOverall(data, slug));
   if (error) {
     console.log(error);
-    res.status(400).send("No such entry found in our database");
+    res.status(400).redirect("/error");
   }
 }
