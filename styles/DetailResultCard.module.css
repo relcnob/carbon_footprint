@@ -9,7 +9,7 @@
   flex-flow: row nowrap;
   align-items: center;
   gap: 0.5rem;
-  background-color: #2b2f32;
+  background-color: var(--secondary);
   list-style: none;
   padding: 0.5rem 1rem;
 }
@@ -17,13 +17,13 @@
 .line {
   width: 2px;
   height: 25px;
-  background-color: white;
+  background-color: var(--text);
 }
 
 .article {
-  background-color: #262a2d;
+  background-color: var(--main);
   border-radius: 5px;
-  color: #f8f8f8;
+  color: var(--text);
   padding: 0.7rem;
 }
 
@@ -33,12 +33,6 @@
   align-items: center;
   gap: 1rem;
   margin-bottom: 0.8rem;
-}
-.icon {
-  content: "";
-  width: 20px;
-  height: 20px;
-  background-color: yellow;
 }
 
 .totalCO2 {

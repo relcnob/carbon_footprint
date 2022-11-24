@@ -11,7 +11,7 @@ export default async function handler(req, res) {
   if (req.method !== "GET") res.status(400).send("The API should be accessed by GET only");
   const { slug } = req.query;
   const { data, error } = await supabase.from(process.env.TABLE_NAME).select("*");
-  if (!error) res.status(200).json(getOverall(data, slug));
+  if (!error) res.status(200).json(getOverall(data, slug), console.log(res));
   if (error) {
     console.log(error);
     res.status(400).send("No such entry found in our database");
