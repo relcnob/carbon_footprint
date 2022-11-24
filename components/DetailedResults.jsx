@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../styles/DetailedResults.module.css";
 import DetailResultCard from "./DetailResultCard";
 function DetailedResults(props) {
-  console.log(props);
+  // console.log(props);
   return (
     <section className={styles.detailCardList}>
       {props.facebook > 0 ? <DetailResultCard SoMeName="facebook" TotalCO2={props.facebook_carbon} /> : null}
