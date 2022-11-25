@@ -52,7 +52,13 @@ function DetailResultCard(props) {
   return (
     <article className={styles.article}>
       <header>
-        <Image src={SoMeIcon} alt="facebook" width="50" height="50"></Image>
+        <Image
+          src={SoMeIcon}
+          alt="facebook"
+          width="50"
+          height="50"
+          className={styles.img}
+        ></Image>
 
         <h3>{props.SoMeName}</h3>
         <div className={styles.totalCO2}>
@@ -66,7 +72,13 @@ function DetailResultCard(props) {
         <DetailResultCardItem type={water} />
         <DetailResultCardItem type={banana} /> */}
         <li className={styles.li}>
-          <Image src={car} alt="car icon" width="auto" height="20"></Image>
+          <Image
+            src={car}
+            alt="car icon"
+            width="auto"
+            height="20"
+            className={styles.img}
+          ></Image>
 
           <div className={styles.line}></div>
 
@@ -80,6 +92,7 @@ function DetailResultCard(props) {
             alt="airplane icon"
             width="auto"
             height="20"
+            className={styles.img}
           ></Image>
 
           <div className={styles.line}></div>
@@ -90,7 +103,13 @@ function DetailResultCard(props) {
           </p>
         </li>
         <li className={styles.li}>
-          <Image src={beef} alt="beef icon" width="auto" height="20"></Image>
+          <Image
+            src={beef}
+            alt="beef icon"
+            width="auto"
+            height="20"
+            className={styles.img}
+          ></Image>
 
           <div className={styles.line}></div>
 
@@ -99,7 +118,13 @@ function DetailResultCard(props) {
           </p>
         </li>
         <li className={styles.li}>
-          <Image src={water} alt="water icon" width="auto" height="20"></Image>
+          <Image
+            src={water}
+            alt="water icon"
+            width="auto"
+            height="20"
+            className={styles.img}
+          ></Image>
 
           <div className={styles.line}></div>
 
@@ -113,6 +138,7 @@ function DetailResultCard(props) {
             alt="banana icon"
             width="auto"
             height="20"
+            className={styles.img}
           ></Image>
 
           <div className={styles.line}></div>
