@@ -56,7 +56,7 @@ function DetailResultCard(props) {
 
         <h3>{props.SoMeName}</h3>
         <div className={styles.totalCO2}>
-          {(props.TotalCO2 * 1).toFixed(2)} CO<sup>2</sup>
+          {(props.TotalCO2 * 1).toFixed(2)}g CO<sup>2</sup>
         </div>
       </header>
       <ul className={styles.ul}>
@@ -70,35 +70,56 @@ function DetailResultCard(props) {
 
           <div className={styles.line}></div>
 
-          <p className={styles.p}>Equal to {(props.TotalCO2 * 5.21).toFixed(2)} km driven in a car</p>
+          <p className={styles.p}>
+            Equal to {(props.TotalCO2 * 5.21).toFixed(2)} km driven in a car
+          </p>
         </li>
         <li className={styles.li}>
-          <Image src={airplane} alt="airplane icon" width="auto" height="20"></Image>
+          <Image
+            src={airplane}
+            alt="airplane icon"
+            width="auto"
+            height="20"
+          ></Image>
 
           <div className={styles.line}></div>
 
-          <p className={styles.p}>Equal to {(props.TotalCO2 * 3.92).toFixed(2)} km flight per passenger</p>
+          <p className={styles.p}>
+            Equal to {(props.TotalCO2 * 3.92).toFixed(2)} km flight per
+            passenger
+          </p>
         </li>
         <li className={styles.li}>
           <Image src={beef} alt="beef icon" width="auto" height="20"></Image>
 
           <div className={styles.line}></div>
 
-          <p className={styles.p}>Equal to {(props.TotalCO2 * 10.05).toFixed(2)} kg of beef</p>
+          <p className={styles.p}>
+            Equal to {(props.TotalCO2 * 10.05).toFixed(2)} kg of beef
+          </p>
         </li>
         <li className={styles.li}>
           <Image src={water} alt="water icon" width="auto" height="20"></Image>
 
           <div className={styles.line}></div>
 
-          <p className={styles.p}>Equal to {(props.TotalCO2 * 0.01).toFixed(2)} l of water</p>
+          <p className={styles.p}>
+            Equal to {(props.TotalCO2 * 0.01).toFixed(2)} l of water
+          </p>
         </li>
         <li className={styles.li}>
-          <Image src={banana} alt="banana icon" width="auto" height="20"></Image>
+          <Image
+            src={banana}
+            alt="banana icon"
+            width="auto"
+            height="20"
+          ></Image>
 
           <div className={styles.line}></div>
 
-          <p className={styles.p}>Equal to {(props.TotalCO2 * 1.11).toFixed(2)} kg of bananas</p>
+          <p className={styles.p}>
+            Equal to {(props.TotalCO2 * 1.11).toFixed(2)} kg of bananas
+          </p>
         </li>
       </ul>
     </article>
