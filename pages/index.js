@@ -7,6 +7,11 @@ import styles from "../styles/Home.module.css";
 export default function Home(props) {
   return (
     <>
+      <Head>
+        <title>SoMe / Carbon Calculator</title>
+        <meta name="description" content="Calculate your social media output carbon emissions" key="desc" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <Hero />
       <CarbonForm message={null} />
     </>
