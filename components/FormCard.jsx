@@ -59,7 +59,7 @@ function FormCard(props) {
           type="range"
           onChange={timeHandler}
           min={0}
-          max={24}
+          max={12}
           step={0.5}
           value={TimeAmount}
           name={props.name}
