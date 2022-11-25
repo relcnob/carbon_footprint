@@ -46,8 +46,8 @@ function UserRank(props) {
         </h4>
         <p>
           You generated{" "}
-          <em>{props.total_emission_per_day.toFixed(2)}g of CO2</em>, in a week
-          you would generate as much as driving{" "}
+          <em>{props.total_emission_per_day.toFixed(2)}g of CO2</em> in a day,
+          in a week you would generate as much as driving{" "}
           <em>
             {carEmissions.toFixed(2)}
             km
